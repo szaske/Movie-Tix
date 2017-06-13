@@ -26,7 +26,13 @@ var getFormattedTime = function (fourDigitTime) {
 };
 
 function Prices(po) {
-
+  var kidTix = 0;
+  var adultTix = 0;
+  var seniorTix = 0;
+  kidTix = po.tickets.toString().match(/kid/g).length; //we're smurt
+  adultTix = po.tickets.toString().match(/adult/g).length; //we're smurt
+  seniorTix = po.tickets.toString().match(/senior/g).length; //we're smurt
+  console.log(kidTix, adultTix, seniorTix);
 }
 
 var movieShows = [
@@ -78,11 +84,7 @@ $(document).ready(function() {
     }
 
     //create a showing
-    var po = new PurchaseOrder(shows[showId], purchasedTix);
-
-    console.log(po);
-
-
+    Prices(new PurchaseOrder(shows[showId], purchasedTix));
 
     //create a purchase order from array of tickets
 
