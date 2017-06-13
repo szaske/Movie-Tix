@@ -7,8 +7,10 @@
   <meta http-equiv="Content-Language" content="en">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,900" rel="stylesheet">
   <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/jquery-ui.js"></script>
   <script src="js/scripts.js"></script>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <title>Movie Tix</title>
 </head>
@@ -33,35 +35,29 @@
               <div class="form-group">
                 <label for="childTickets" class="col-lg-3 control-label"># of Child Tickets</label>
                 <div class="col-lg-9">
-                  <input class="input" id="childTickets" type="number" min="0" max="20" step="1" />
+                  <input class="input spin" id="childTickets" type="number" min="0" max="20" step="1" />
                 </div>
               </div>
               <div class="form-group">
                 <label for="adultTickets" class="col-lg-3 control-label"># of Adult Tickets</label>
                 <div class="col-lg-9">
-                  <input class="input" id="adultTickets" type="number" min="0" max="20" step="1" />
+                  <input class="input spin" id="adultTickets" type="number" min="0" max="20" step="1" />
                 </div>
               </div>
               <div class="form-group">
                 <label for="seniorTickets" class="col-lg-3 control-label"># of Senior Tickets</label>
                 <div class="col-lg-9">
-                  <input class="input" id="seniorTickets" type="number" min="0" max="20" step="1" />
+                  <input class="input spin" id="seniorTickets" type="number" min="0" max="20" step="1" />
                 </div>
               </div>
 
-
-              <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
-                  <button type="submit" class="btn btn-primary">Purchase Tix</button>
-                </div>
-              </div>
             </fieldset>
           </form>
         </div>
       </div>
       <!--end of column -->
       <div id="results" class="col-lg-6">
-        <div class="divTable" style="border: 3px solid #000;" >
+        <div class="divTable">
         <div class="divTableBody">
         <div id="row-Kid" class="divTableRow">
         <div class="results-Label divTableCell">Child Tickets Total: </div>
@@ -95,12 +91,17 @@
         <div class="divTableCell"></div>
         <div class="results-Label divTableCell"></div>
         <div class="divTableCell"></div>
-        <div class="results-Label divTableCell">Purchase Total: </div>
-        <div id="total-Total" class="divTableCell">$0.00</div>
+        <div class="bold results-Label divTableCell">Purchase Total: </div>
+        <div id="total-Total" class="bold divTableCell">$0.00</div>
         </div>
         </div>
         </div>
 <!-- DivTable.com -->
+        <div class="form-group">
+          <div class="float-right col-lg-10 col-lg-offset-2">
+            <button type="submit" class="pull-right btn btn-primary">Purchase Tix</button>
+          </div>
+        </div>
       </div>
 
     </div>

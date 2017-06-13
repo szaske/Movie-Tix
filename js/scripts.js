@@ -148,4 +148,11 @@ $(document).ready(function() {
     console.log('purchase called');
 
   });
+  var spinner = $( ".spin" ).spinner();
+
+  $('.ui-button-icon').click(function() {
+   $(this).parent().parent().children(':first-child').trigger( "input" );
+   console.log(this);
+  });
+
 });

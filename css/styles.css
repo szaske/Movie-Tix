@@ -1,5 +1,14 @@
 body {
-  background-color: #F5F5F5;
+  background-color: #444;
+}
+
+/* to do: implement https://css-tricks.com/examples/InputNumberIncrementer/ */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 #container {
@@ -24,7 +33,13 @@ body {
 }
 
 #results {
-  
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 20px;
+  color: #237511;
 }
 
 /* DivTable.com */
@@ -40,7 +55,7 @@ body {
 	display: table-header-group;
 }
 .divTableCell, .divTableHead {
-	border: 1px solid #999999;
+	/*border: 1px solid #999999;*/
 	display: table-cell;
 	padding: 3px 10px;
 }
